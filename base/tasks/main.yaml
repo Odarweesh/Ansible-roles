@@ -1,0 +1,12 @@
+   - name: update Repo 
+     when: ansible_distribution == "Ubuntu"
+     apt:
+       update_cache: yes
+       state: latest
+
+
+   - name: update Repo 
+     when: ansible_distribution == "RedHat"
+     yum:
+       update_cache: yes
+       state: latest

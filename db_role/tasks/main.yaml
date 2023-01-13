@@ -1,0 +1,13 @@
+   - name: install maria db for Ubuntu
+     when: ansible_distribution == "Ubuntu"
+     tags: db_ubuntu,db
+     apt:
+       name: mariadb-server
+      #  update_cache: yes
+
+   - name: install maria db for Redhat
+     when: ansible_distribution == "RedHat"
+     tags: db_redhat,db
+     yum:
+       name: mariadb-server
+      #  update_cache: yes

@@ -1,0 +1,20 @@
+ - hosts: all
+   become: true
+   roles:
+   - base
+
+ - hosts: db
+   become: true
+   roles:
+   - db_role
+
+ - hosts: application
+   become: true
+   roles:
+   - web_role
+   
+   
+
+   
+
+
